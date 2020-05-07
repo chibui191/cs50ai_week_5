@@ -86,7 +86,7 @@ def get_model():
     """
     # create a convolutional neural network
     convo_model = tf.keras.models.Sequential([
-        # Convolutional layer #1 - learn 16 filters using a 3x3 kernel
+        # Convolutional layer #1 - learn 32 filters using a 3x3 kernel
         tf.keras.layers.Conv2D(
             32, (3, 3), activation="relu", input_shape=(IMG_WIDTH, IMG_HEIGHT, 3)
         ),
@@ -94,7 +94,7 @@ def get_model():
         # max-pooling layer #1, using 2x2 pool size
         tf.keras.layers.MaxPooling2D(pool_size=(2, 2)),
 
-        # Convolutional layer #2 - learn 32 filters using a 3x3 kernel
+        # Convolutional layer #2 - learn 64 filters using a 3x3 kernel
         tf.keras.layers.Conv2D(
             64, (3, 3), activation="relu", input_shape=(IMG_WIDTH, IMG_HEIGHT, 3)
         ),
@@ -102,7 +102,7 @@ def get_model():
         # max-pooling layer #2, using 2x2 pool size
         tf.keras.layers.MaxPooling2D(pool_size=(2, 2)),
 
-        # Convolutional layer #3 - learn 32 filters using a 3x3 kernel
+        # Convolutional layer #3 - learn 128 filters using a 3x3 kernel
         tf.keras.layers.Conv2D(
             128, (3, 3), activation="relu", input_shape=(IMG_WIDTH, IMG_HEIGHT, 3)
         ),
